@@ -2,3 +2,6 @@ fastapi
 uvicorn
 markdown
 language-tool-python
+python-multipart
+pytest
+httpx
