@@ -29,6 +29,7 @@ markdown/
 ├── main.py                  # Entry point (re-exports app)
 ├── notes.json               # Note storage (created at runtime)
 ├── requirements.txt
+├── test_app.py              # Automated tests
 └── README.md
 ```
 
