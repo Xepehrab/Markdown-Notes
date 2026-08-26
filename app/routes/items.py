@@ -4,6 +4,9 @@ from fastapi import APIRouter, HTTPException, UploadFile
 
 from app.models import Item
 from app.storage import read_items, write_items
+import logging
+
+logger= logging.getLogger(__name__)
 
 router = APIRouter(tags=["items"])
 
@@ -15,6 +18,7 @@ def say_ok():
 
 @router.post("/items")
 def create_items(item: Item):
+    logger.info("Creating item")
     items = read_items()
     item.id = str(uuid.uuid4())
     items.append(item.model_dump())
