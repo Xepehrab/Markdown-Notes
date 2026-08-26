@@ -10,6 +10,9 @@ A FastAPI-based Markdown note-taking API with save/list/render endpoints, file u
 - Render a saved note to HTML by its id
 - Upload a `.md` file and store its content
 - Grammar check (English, via LanguageTool)
+- Clean code with `ruff` linting + auto-format
+- Error handling & logging on file operations
+
 
 ## Project structure
 
@@ -37,6 +40,14 @@ markdown/
 
 - Python 3.9+
 - Java (required by `language-tool-python`)
+- ruff (for linting)
+
+## Linting
+
+bash
+pip install ruff
+ruff check .
+ruff format .
 
 ## Install
 
