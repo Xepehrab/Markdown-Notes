@@ -5,3 +5,4 @@ language-tool-python
 python-multipart
 pytest
 httpx
+ruff
