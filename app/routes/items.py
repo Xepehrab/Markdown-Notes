@@ -1,6 +1,6 @@
 import uuid
 
-from fastapi import APIRouter, File, HTTPException, UploadFile
+from fastapi import APIRouter, HTTPException, UploadFile
 
 from app.models import Item
 from app.storage import read_items, write_items
@@ -38,7 +38,7 @@ def get_item(item_id: str) -> Item:
 
 
 @router.post("/upload")
-async def upload_file(file: UploadFile = File(...)):
+async def upload_file(file: UploadFile):
     content = await file.read()
     text = content.decode("utf-8")
 
@@ -51,3 +51,4 @@ async def upload_file(file: UploadFile = File(...)):
     items.append(new_item)
     write_items(items)
     return new_item
+
