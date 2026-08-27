@@ -1,4 +1,4 @@
-# md-notes-api
+# Markdown
 
 A FastAPI-based Markdown note-taking API with save/list/render endpoints, file upload, and grammar checking — built as a learning project following the [roadmap.sh](https://roadmap.sh/projects/markdown-note-taking-app) guide.
 
